@@ -15,7 +15,11 @@ PDSK=$(df --total | awk '/^total/ {print $5}')
 PCPU=$(top -bn1 | awk '/^%Cpu/ {printf "%.1f%%", $2 + $4}')
 BOOT=$(who -b | awk '{print $3 " " $4'})
 LVMU=$(if [ $(lsblk -o TYPE | grep "lvm" | wc -l) -eq 0 ] ; then echo no; else echo yes; fi)
-CTCP=$()
+CTCP=$(ss -Ht | grep ESTAB | wc -l)
+USER=$(users | wc -w)
+IPVF=$(hostname -I)
+MACA=$(ip link show | grep ether | awk '{print $2}')
+SUDO=$(journalctl _COMM=sudo | grep COMMAND | wc -l)
 
 echo "		----------------------------------------
 		#Architecture		:	$ARCH
@@ -27,4 +31,7 @@ echo "		----------------------------------------
 		#Last boot		:	$BOOT
 		#LVM active		:	$LVMU
 		#TCP Connections	:	$CTCP established
+		#User log		:	$USER
+		#Network		:	IPv4 $IPV4 ($MACA)
+		#Sudo			:	$SUDO commands
 		----------------------------------------"
