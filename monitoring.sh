@@ -17,7 +17,7 @@ BOOT=$(who -b | awk '{print $3 " " $4'})
 LVMU=$(if [ $(lsblk -o TYPE | grep "lvm" | wc -l) -eq 0 ] ; then echo no; else echo yes; fi)
 CTCP=$(ss -Ht | grep ESTAB | wc -l)
 USER=$(users | wc -w)
-IPVF=$(hostname -I)
+IPVF=$(hostname -I | awk '{print $1}')
 MACA=$(ip link show | grep ether | awk '{print $2}')
 SUDO=$(journalctl _COMM=sudo -q | grep COMMAND | wc -l)
 
