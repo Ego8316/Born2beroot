@@ -19,7 +19,7 @@ CTCP=$(ss -Ht | grep ESTAB | wc -l)
 USER=$(users | wc -w)
 IPVF=$(hostname -I)
 MACA=$(ip link show | grep ether | awk '{print $2}')
-SUDO=$(journalctl _COMM=sudo | grep COMMAND | wc -l)
+SUDO=$(journalctl _COMM=sudo -q | grep COMMAND | wc -l)
 
 echo "		----------------------------------------
 		#Architecture		:	$ARCH
