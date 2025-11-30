@@ -16,7 +16,7 @@ Hardening cheatsheet for 42's Born2beroot project. The subject is about system a
 ## 📦 What’s in this repo
 - `monitoring.sh` — system summary sent with `wall` (CPU, RAM, disk, network, sudo count).
 - `renamevg.sh` — renames the LVM volume group to `LVMGroup` and rewrites boot/fstab entries if you used another name.
-- `signature.txt` — hash used by Moulinette.
+- `signature.txt` — hash to show during evaluation.
 - `notes.pdf` — personal notes taken while setting up the VM.
 - `cheatsheet.pdf` — condensed cheatsheet with commands useful during evaluation.
 
