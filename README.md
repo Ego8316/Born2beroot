@@ -9,6 +9,8 @@
 
 # Born2beroot
 
+### 🎓 42 School – Final Grade: **125/100**
+
 Hardening cheatsheet for 42's Born2beroot project. The subject is about system administration, not coding, so this repo just collects the steps, configs, and helper scripts needed to deploy a minimal Debian server, lock it down, and keep it reproducible for evaluation.
 
 ## 📦 What’s in this repo
