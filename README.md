@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://raw.githubusercontent.com/ayogun/42-project-badges/main/badges/born2berootm.png" height="150" alt="42 Born2beroot Badge"/>
+  <img src="https://github.com/Ego8316/Ego8316/blob/main/42-badges/born2beroot.png" height="150" alt="42 Born2beroot Badge"/>
 </p>
 
 <p align="center">
